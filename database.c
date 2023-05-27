@@ -315,8 +315,7 @@ int deleteRecord(struct record** start, int accountnum)
 //                -1: error occurred while reading the file
 //
 *****************************************************************/
-int readfile(struct record** start, char file[])
-{
+int readfile(struct record** start, const char* file) {
     FILE* fp;
     char line[150];
     int accountnum;
@@ -324,10 +323,16 @@ int readfile(struct record** start, char file[])
     char address[80];
     int lineNum = 0;
 
+    if (debug == 1) {
+        printf("This is the readfile function.\n");
+        printf("This is a debug mode.\n");
+        printf("You have passed the struct record pointer and the file name: %s \n", file);
+    }
+
     // Open the file for reading
     errno_t err = fopen_s(&fp, file, "r");
     if (err != 0) {
-        printf("File opening error occurred\n");
+        printf("File opening error occurred.\n");
         return -1;
     }
     if (fp == NULL) {
@@ -384,15 +389,20 @@ int readfile(struct record** start, char file[])
 //                -1: error occurred while writing to the file
 //
 *****************************************************************/
-int writefile(struct record* start, char file[])
-{
+int writefile(struct record* start, const char* file) {
     FILE* fp;
     struct record* current = start;
+
+    if (debug == 1) {
+        printf("This is the writefile function.\n");
+        printf("This is a debug mode.\n");
+        printf("You have passed the struct record pointer and the file name: %s \n", file);
+    }
 
     // Open the file for writing
     errno_t err = fopen_s(&fp, file, "w");
     if (err != 0) {
-        printf("File opening error occurred\n");
+        printf("File opening error occurred.\n");
         return -1;
     }
     if (fp == NULL) {
@@ -402,7 +412,10 @@ int writefile(struct record* start, char file[])
 
     // Write each record to the file
     while (current != NULL) {
-        fprintf(fp, "%d\n%s\n%s\n", current->accountno, current->name, current->address);
+        //fprintf(fp, "%d\n", current->accountno);
+        //fprintf(fp, "%s\n", current->name);
+        fprintf(fp, "%d\n%s", current->accountno, current->name);
+        fprintf(fp, "%s\n", current->address);
         current = current->next;
     }
 
