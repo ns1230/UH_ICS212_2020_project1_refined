@@ -1,22 +1,22 @@
 /*****************************************************************
 //
 //  NAME:        Nonoka Sasaki
-//  //  //  //
-//  //  //  //  HOMEWORK:    project1
-//  //  //  //
-//  //  //  //  CLASS:       ICS 212
-//  //  //  //
-//  //  //  //  INSTRUCTOR:  Ravi Narayan
-//  //  //  //
-//  //  //  //  DATE:        March 12, 2020
-//  //  //  //
-//  //  //  //  FILE:        database.c
-//  //  //  //
-//  //  //  //  DESCRIPTION:
-//  //  //  //   This file is the database for project1.
-//  //  //  //   It contains addRecord, printRecord, printAllRecords, modifyrecord, deleteRecord, readfile, writefile, and cleanup functions.
-//  //  //  //
-//  //  //  ****************************************************************/
+//
+//  PROJECT:    project1
+//  
+//  CLASS:       ICS 212
+//
+//  DATE:        March 12, 2020;  refined May 27, 2023
+//  
+//  FILE:        database.c
+//  
+//  DESCRIPTION:
+//  Database.c is a source file that contains the implementation of various functions for managing a database of records. 
+//  It provides functions for adding records, deleting records, modifying records, printing individual records, 
+//  printing all records, reading records from a file, and writing records to a file. 
+//  The functions are designed to work with a linked list data structure to store and manipulate the records.
+//  
+/****************************************************************/
 
 #include<stdio.h>
 #include<string.h>
