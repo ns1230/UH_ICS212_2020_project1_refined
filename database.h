@@ -91,16 +91,16 @@ int modifyRecord (struct record *, int, char [ ]);
 /*****************************************************************
 //
 //  Function name: deleteRecord
-//  //  //  //
-//  //  //  //  DESCRIPTION:   deletes a record
-//  //  //  //
-//  //  //  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //  //  //                 accountnum (int): users account cumber
-//  //  //  //                 
-//  //  //  //  Return values:  0 : success
-//  //  //  //
-//  //  //  ****************************************************************/
-
+//
+//  DESCRIPTION:   deletes a record from the database based on the account number.
+//
+//  Parameters:    start (struct record**): points to beginning of linked list
+//                 accountnum (int): account number of the record to delete
+//
+//  Return value:  0 : success
+//                -1: record not found
+//
+*****************************************************************/
 int deleteRecord(struct record **, int);
 
 
