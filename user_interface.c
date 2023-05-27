@@ -18,21 +18,10 @@
 //  
 /****************************************************************/
 
-
 #include<stdio.h>
 #include<string.h>
-#ifndef  _RECORD_H_
-#define _RECORD_H_
 #include "record.h"
-#endif
-
-#ifndef  _DATABASE_H_
-#define _DATABASE_H_
 #include "database.h"
-#endif
-
-int debug;
-//int setting doesn't need to be here instaed of main??
 
 
 /*****************************************************************
@@ -68,26 +57,28 @@ void printmenu()
 //
 //****************************************************************/
 
-void getaddress (char address [ ], int ad)
+void getaddress(char address[], int ad)
 {
     char x;
     int i = 0;
     int y = 0;
 
-    while((x = getchar()) != '+' && (y == 0))
+    while ((x = getchar()) != '+' && (y == 0))
     {
-        address[i] = x;
-        i++;
-        if (i > (ad -1))
+        if (i < (ad - 1))
+        {
+            address[i] = x;
+            i++;
+        }
+        else
         {
             printf("Address is too long...\n");
             i = 0;
-            y = 1;                                                  
+            y = 1;
         }
     }
     address[i] = '\0';
 }
-
 
 /*****************************************************************
 //
@@ -107,14 +98,12 @@ int main(int argc, char* argv[])
 {
     struct record* start;
     int answer;
-    int setting;
-
     int accountnum;
     char name[100];
     char address[100];
     start = NULL;
     debug = 0;
-    setting = 1;    
+    answer = 0;
 
     // Call readfile function to load records from the file
     readfile(&start, "project1file.txt");
@@ -127,9 +116,8 @@ int main(int argc, char* argv[])
         }
         else
         {
-            printf("debug: error. If you are trying to use debug,");
+            printf("Debug: error. If you are trying to use Debug Mode,");
             printf(" the second word has to be debug.\n\n");
-            setting = 0;
         }
     }
     else if (argc == 1)
@@ -138,18 +126,24 @@ int main(int argc, char* argv[])
     }
     else
     {
-        printf("debug: error.");
-        printf("If you want to use the debug mode, the second word has to be 'debug', "); 
+        printf("Debug: error.");
+        printf("If you want to use the Debug Mode, the second word has to be 'debug', "); 
         printf("and nothing should be typed after that\n\n");
-        setting = 0;
     }
 
      
-    while (setting == 1)
+    while (1)
     {
         printf("\nWelcome. \n");
         printmenu();
-        scanf_s("%d", &answer);
+        if (scanf_s("%d", &answer) != 1)
+        {
+            // Clear the input buffer
+            while (getchar() != '\n')
+                continue;
+            printf("\nInvalid input. Please enter a valid number from 1 - 6.\n");
+            continue;
+        }
         printf("\n");
 
         if (answer == 1)
@@ -166,8 +160,8 @@ int main(int argc, char* argv[])
             {
                 printf("%d %s %s \n", accountnum, name, address);
                 addRecord(&start, accountnum, name, address);
-                printf("The following record has been added\n");
-                printf("%d %s %s \n", accountnum, name, address);
+                //printf("The following record has been added\n");
+                //printf("%d %s %s \n", accountnum, name, address);
             }
             else 
             {
@@ -219,36 +213,16 @@ int main(int argc, char* argv[])
         {
             printf("\n");
             printf("Bye. \n");
-            setting = 0;
+            break;
         }
         
         else if (answer < 1 || answer > 6)
         {
             printf("\n");
-            printf("type a valid number from 1 - 6\n");
+            printf("\nInvalid input. Please enter a valid number from 1 - 6.\n");
         }
     }
     writefile(start, "project1file.txt");
     cleanup(&start);
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
