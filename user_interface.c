@@ -82,7 +82,7 @@ void getaddress (char address [ ], int ad)
         {
             printf("Address is too long...\n");
             i = 0;
-            y = 0;                                                  
+            y = 1;                                                  
         }
     }
     address[i] = '\0';
