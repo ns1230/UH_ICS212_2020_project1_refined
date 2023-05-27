@@ -59,14 +59,15 @@ int printRecord (struct record *, int);
 
 /*****************************************************************
 //
-//  Function name: printAllRecord
-//  //  //  //
-//  //  //  //  DESCRIPTION:   prints all the records
-//  //  //  //
-//  //  //  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //  //  //
-//  //  //  ****************************************************************/
-
+//  Function name: printAllRecords
+//
+//  DESCRIPTION:   prints all the records in the database.
+//
+//  Parameters:    start (struct record*): points to the beginning of the linked list
+//
+//  Return value:  None
+//
+*****************************************************************/
 void printAllRecords(struct record *);
 
 
