@@ -38,17 +38,17 @@ int debug = 0;
 /*****************************************************************
 //
 //  Function name: addRecord
-//  //  //  //
-//  //  //  //  DESCRIPTION:   adds a record
-//  //  //  //
-//  //  //  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //  //  //                 accountnum (int): users account number
-//  //  //  //                 name(char[]): users name
-//  //  //  //                 address(char[]): users mailing address
-//  //  //  //
-//  //  //  //  Return values:  0 : success
-//  //  //  //
-//  //  //  ****************************************************************/
+//
+//  DESCRIPTION:   adds a new record to the database.
+//
+//  Parameters:    start (struct record**): points to the beginning of the linked list
+//                 accountnum (int): account number of the new record
+//                 name (char[]): name of the new record
+//                 address (char[]): address of the new record
+//
+//  Return value:  None
+//
+*****************************************************************/
 
 int addRecord(struct record** start, int accountnum, char uname[], char uaddress[])
 {
@@ -151,15 +151,15 @@ int printRecord(struct record* start, int accountnum)
 
 /*****************************************************************
 //
-//  Function name: printAllRecord
-//  //  //  //
-//  //  //  //  DESCRIPTION:   prints all the records
-//  //  //  //
-//  //  //  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //  //  //                 
-//  //  //  //  Return values:  0 : success
-//  //  //  //
-//  //  //  ****************************************************************/
+//  Function name: printAllRecords
+//
+//  DESCRIPTION:   prints all the records in the database.
+//
+//  Parameters:    start (struct record*): points to the beginning of the linked list
+//
+//  Return value:  None
+//
+*****************************************************************/
 
 void printAllRecords(struct record* start)
 {
