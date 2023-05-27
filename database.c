@@ -2,9 +2,9 @@
 //
 //  NAME:        Nonoka Sasaki
 //
-//  PROJECT:    project1
+//  PROJECT:     Project1
 //  
-//  CLASS:       ICS 212
+//  CLASS:       UHM ICS 212
 //
 //  DATE:        March 12, 2020;  refined May 27, 2023
 //  
