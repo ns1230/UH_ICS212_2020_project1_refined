@@ -44,16 +44,16 @@ int addRecord (struct record **, int, char [ ],char [ ]);
 /*****************************************************************
 //
 //  Function name: printRecord
-//  //  //  //
-//  //  //  //  DESCRIPTION:   prints a record
-//  //  //  //
-//  //  //  //  Parameters:    start (struct record *): points to beggining of linked list
-//  //  //  //                 accountnum (int): users account number
-//  //  //  //
-//  //  //  //  Return values:  0 : success
-//  //  //  //
-//  //  //  ****************************************************************/
-
+//
+//  DESCRIPTION:   prints a record with the given account number.
+//
+//  Parameters:    start (struct record*): points to beginning of linked list
+//                 accountnum (int): account number of the record to print
+//
+//  Return value:  0 : success
+//                -1: record not found
+//
+*****************************************************************/
 int printRecord (struct record *, int);
 
 
