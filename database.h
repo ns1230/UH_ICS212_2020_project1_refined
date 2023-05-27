@@ -22,13 +22,7 @@
 
 #include "record.h"
 
-#endif
-
-
 extern int debug;
-extern int setting;     //is this really needed? not used in any file other than main in user_interface
-
-
 /*****************************************************************
 //
 //  Function name: addRecord
@@ -155,6 +149,8 @@ int writefile(struct record *, char []);
 
 
 void cleanup(struct record**);
+
+#endif
 
 
 
