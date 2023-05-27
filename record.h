@@ -8,11 +8,11 @@
 //
 //  DATE:        March 12, 2020;  refined May 27, 2023
 //  
-//  FILE:        database.c
+//  FILE:        record.h
 //  
 //  DESCRIPTION:
-//  database.h is a header file that defines the structure and function prototypes used in the database operations. 
-//  It contains the structure definition for the "record" data type, which represents a single record in the database. 
+//  record.h is a header file that defines the structure for the "record" data type used in the database operations. 
+//  It contains the structure definition for the "record" structure, which represents a single record in the database. 
 //  The structure includes fields such as account number, name, and address.
 //  
 /****************************************************************/
