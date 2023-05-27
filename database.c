@@ -27,13 +27,9 @@
 #include "record.h"
 #endif
 
-#ifndef  _DATABASE_H_
-#define _DATABASE_H_
 #include "database.h"
-#endif
 
-
-int debug = 0;
+debug = 0;
 
 /*****************************************************************
 //
