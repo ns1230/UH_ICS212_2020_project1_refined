@@ -424,12 +424,17 @@ int writefile(struct record* start, const char* file) {
 /*****************************************************************
 //
 //  Function name: cleanup
-//  //
-//  //  DESCRIPTION:   releases all allocated spaces in the heap memory and assign NULL to start
-//  //
-//  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //
-//  ****************************************************************/
+//
+//  DESCRIPTION:   Frees the memory allocated for the linked list
+//                 and sets the start pointer to NULL, effectively
+//                 clearing the database.
+//
+//  Parameters:    start (struct record**): points to the beginning
+//                 of the linked list
+//
+//  Return value:  None
+//
+*****************************************************************/
 
 void cleanup (struct record** start)
 {
