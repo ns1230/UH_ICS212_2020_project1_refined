@@ -16,14 +16,18 @@
 //  The structure includes fields such as account number, name, and address.
 //  
 /****************************************************************/
+#ifndef RECORD_H
+#define RECORD_H
 
 struct record
 {
     int                accountno;
     char               name[25];
     char               address[80];
-    struct record*     next;            
+    struct record*     next;            //"struct record* next" and "struct record *next" means the same in c. '*' denotes that it is a pointer
 };
+
+#endif
 
 
 
