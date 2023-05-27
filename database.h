@@ -123,16 +123,16 @@ int readfile(struct record **, char []);
 /*****************************************************************
 //
 //  Function name: writefile
-//  //
-//  //  DESCRIPTION:   writes into a file from an array
-//  //
-//  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //                 file(char[]): name of the file
-//  //                 
-//  //  Return values:  0 : success
-//  //
-//  ****************************************************************/
-
+//
+//  DESCRIPTION:   writes records from the linked list into a file.
+//
+//  Parameters:    start (struct record*): points to the beginning of the linked list
+//                 file (char[]): name of the file to write to
+//
+//  Return value:  0 : success
+//                -1: error occurred while writing to the file
+//
+*****************************************************************/
 int writefile(struct record *, char []);
 
 
