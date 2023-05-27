@@ -106,30 +106,17 @@ int deleteRecord(struct record **, int);
 
 /*****************************************************************
 //
-//  Function name: cleanup
-//  //
-//  //  DESCRIPTION:   releases all allocated spaces in the heap memory and assign NULL to start
-//  //
-//  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //
-//  ****************************************************************/
-
-void cleanup(struct record**);
-
-
-/*****************************************************************
-//
 //  Function name: readfile
-//  //
-//  //  DESCRIPTION:   reads a file and puts it in an array
-//  //
-//  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //                 file(char[]): name of the file
-//  //                 
-//  //  Return values:  0 : success
-//  //
-//  ****************************************************************/
-
+//
+//  DESCRIPTION:   reads records from a file and adds them to the linked list.
+//
+//  Parameters:    start (struct record**): points to the pointer to the beginning of the linked list
+//                 file (char[]): name of the file to read from
+//
+//  Return value:  0 : success
+//                -1: error occurred while reading the file
+//
+*****************************************************************/
 int readfile(struct record **, char []);
 
 
