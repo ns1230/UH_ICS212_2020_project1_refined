@@ -1,23 +1,22 @@
 /*****************************************************************
 //
 //  NAME:        Nonoka Sasaki
+//
+//  PROJECT:     Project1
 //  
-//  HOMEWORK:    project1
-//   
-//  CLASS:       ICS 212
-//   
-//  INSTRUCTOR:  Ravi Narayan
-//   
-//  DATE:        March 12, 2020; Reviewed May 27th 2023
-//   
+//  CLASS:       UHM ICS 212
+//
+//  DATE:        March 12, 2020;  refined May 27, 2023
+//  
 //  FILE:        user_interface.c
-//   
-//  DESCRIPTION:
-//  This file is the user-interface for project1.
-//  It contains printmenu getaddress, and main functions.
 //  
-//   
-// ****************************************************************/
+//  DESCRIPTION:
+//  user_interface.c is a source file that serves as the user interface for interacting with the database. 
+//  It contains the main function and supporting functions for displaying a menu, getting user input, and executing the requested operations on the database. 
+//  The file handles user inputs, such as adding a new record, printing information about a record, modifying a record, deleting a record, and quitting the program. 
+//  It also includes functions for reading records from a file at the beginning and writing records to a file before exiting. 
+//  
+/****************************************************************/
 
 
 #include<stdio.h>
@@ -83,7 +82,7 @@ void getaddress (char address [ ], int ad)
         {
             printf("Address is too long...\n");
             i = 0;
-            y = 0;                                                       //shouldn't y be changed to 1???
+            y = 0;                                                  
         }
     }
     address[i] = '\0';
