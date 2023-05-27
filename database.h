@@ -136,6 +136,20 @@ int readfile(struct record **, char []);
 int writefile(struct record *, char []);
 
 
+/*****************************************************************
+//
+//  Function name: cleanup
+//
+//  DESCRIPTION:   Frees the memory allocated for the linked list
+//                 and sets the start pointer to NULL, effectively
+//                 clearing the database.
+//
+//  Parameters:    start (struct record**): points to the beginning
+//                 of the linked list
+//
+//  Return value:  None
+//
+*****************************************************************/
 void cleanup(struct record**);
 
 #endif
