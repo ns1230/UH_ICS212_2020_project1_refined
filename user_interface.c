@@ -1,22 +1,22 @@
 /*****************************************************************
 //
 //  NAME:        Nonoka Sasaki
-//  //  
-//  //  HOMEWORK:    project1
-//  //  
-//  //  CLASS:       ICS 212
-//  //  
-//  //  INSTRUCTOR:  Ravi Narayan
-//  //  
-//  //  DATE:        March 12, 2020
-//  //  
-//  //  FILE:        user_interface.c
-//  //  
-//  //  DESCRIPTION:
-//  //  This file is the user-interface for project1.
-//  //  It contains printmenu getaddress, and main functions.
-//  //  
-//  //  
+//  
+//  HOMEWORK:    project1
+//   
+//  CLASS:       ICS 212
+//   
+//  INSTRUCTOR:  Ravi Narayan
+//   
+//  DATE:        March 12, 2020; Reviewed May 27th 2023
+//   
+//  FILE:        user_interface.c
+//   
+//  DESCRIPTION:
+//  This file is the user-interface for project1.
+//  It contains printmenu getaddress, and main functions.
+//  
+//   
 // ****************************************************************/
 
 
