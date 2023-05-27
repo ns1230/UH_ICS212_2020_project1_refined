@@ -74,17 +74,17 @@ void printAllRecords(struct record *);
 /*****************************************************************
 //
 //  Function name: modifyRecord
-//  //  //  //
-//  //  //  //  DESCRIPTION:   modyfies a record
-//  //  //  //
-//  //  //  //  Parameters:    start (struct record **): points to beggining of linked list
-//  //  //  //                 accountnum (int): users account number
-//  //  //  //                 address(char[]): users mailing address
-//  //  //  //
-//  //  //  //  Return values:  0 : success
-//  //  //  //
-//  //  //  ****************************************************************/
-
+//
+//  DESCRIPTION:   modifies the address of a record with the given account number.
+//
+//  Parameters:    start (struct record*): points to beginning of linked list
+//                 accountnum (int): account number of the record to modify
+//                 address (char[]): new mailing address
+//
+//  Return value:  0 : success
+//                -1: record not found
+//
+*****************************************************************/
 int modifyRecord (struct record *, int, char [ ]);
 
 
